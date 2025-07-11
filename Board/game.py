@@ -1,13 +1,39 @@
 import pygame
+import pyautogui
+import pygetwindow as gw
+import random
+import os
+import time
+
 from constants import *
 from tile import *
-from board import * 
+from board import *
+
 
 class Game:
     def __init__(self):
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption(TITLE)
         self.clock = pygame.time.Clock()
+        os.environ['SDL_VIDEO_CENTERED'] = '1'  # Center the Window
+
+        # Get Pygame Window
+        window = gw.getWindowsWithTitle(TITLE)[0]
+        window.activate()
+        win_left = window.left
+        win_top = window.top
+
+     
+        # Move the mouse 
+        for _ in range(6):
+             
+            x = random.randint(0, WIDTH - 1)
+            y = random.randint(0, HEIGHT - 1)
+            abs_x = win_left + x
+            abs_y = win_top + y
+            pyautogui.moveTo(abs_x, abs_y, duration=0.5)
+            pyautogui.click(interval=0.5)
+
 
     def new(self):
         self.board = Board()
