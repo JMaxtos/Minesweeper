@@ -1,7 +1,7 @@
-from Board.board import Board
-from ai_tile import AI_Tile
-from Board.setupTiles import *
-from Board.constants import COLUMNS,ROWS
+from board import *
+from ai_tile import *
+from setupTiles import *
+from constants import COLUMNS,ROWS
 
 
 class AIBoard(Board):

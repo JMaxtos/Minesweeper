@@ -1,4 +1,4 @@
-from Board.tile import Tile
+from tile import Tile
 
 class AI_Tile(Tile):
     def __init__(self,x,y,image=None, type="?",revealed=False,flagged=False):
