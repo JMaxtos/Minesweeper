@@ -88,10 +88,4 @@ class Game:
         pygame.quit()
         quit(0)
         
-        
-        
-game = Game()
-while True:
-    game.new()
-    game.run()
-
+    
