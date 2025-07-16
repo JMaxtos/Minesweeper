@@ -25,14 +25,7 @@ class Game:
 
      
         # Move the mouse 
-        for _ in range(6):
-             
-            x = random.randint(0, WIDTH - 1)
-            y = random.randint(0, HEIGHT - 1)
-            abs_x = win_left + x
-            abs_y = win_top + y
-            pyautogui.moveTo(abs_x, abs_y, duration=0.5)
-            pyautogui.click(interval=0.5)
+       
 
 
     def new(self):
